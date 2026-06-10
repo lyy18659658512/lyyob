@@ -20,8 +20,10 @@ obsidian-git-data.json
 .claude/
 .claudian/
 
-# Obsidian 插件代码（由 community-plugins.json 管理，无需版本控制）
-.obsidian/plugins/
+# Obsidian 插件代码（仅忽略代码文件，data.json 配置由 Git 备份）
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
 
 # 附件素材（由 Remotely Save 同步，Git 仅管理文字笔记）
 6 - ATTACHMENTS/

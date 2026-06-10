@@ -1,0 +1,64 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "9 - SYSTEM/Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "3 - KNOWLEDGE/2-Atomic",
+      "template": "9 - SYSTEM/Templates/原子笔记模板.md"
+    },
+    {
+      "folder": "3 - KNOWLEDGE/1-Reference/2-Courses",
+      "template": "9 - SYSTEM/Templates/课程笔记模板.md"
+    },
+    {
+      "folder": "3 - KNOWLEDGE/1-Reference/3-Articles",
+      "template": "9 - SYSTEM/Templates/文章笔记模板.md"
+    },
+    {
+      "folder": "2 - WORK/2-Meetings",
+      "template": "9 - SYSTEM/Templates/会议记录模板.md"
+    },
+    {
+      "folder": "2 - WORK/1-Projects",
+      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
+    },
+    {
+      "folder": "2 - WORK/3-Notes",
+      "template": "9 - SYSTEM/Templates/工作杂记模板.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": ""
+    }
+  ],
+  "template_folder": "9 - SYSTEM/Templates"
+}
