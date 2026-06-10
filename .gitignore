@@ -15,3 +15,10 @@ desktop.ini
 
 # Git 插件日志
 obsidian-git-data.json
+
+# AI 辅助工具本地缓存（设备特有，无需同步）
+.claude/
+.claudian/
+
+# 附件素材（由 Remotely Save 同步，Git 仅管理文字笔记）
+6 - ATTACHMENTS/
