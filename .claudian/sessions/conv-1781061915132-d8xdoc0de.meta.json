@@ -4,6 +4,20 @@
   "title": "Configure Obsidian Git plugin settings",
   "titleGenerationStatus": "success",
   "createdAt": 1781061915132,
-  "updatedAt": 1781061918151,
-  "sessionId": null
+  "updatedAt": 1781062091272,
+  "lastResponseAt": 1781062091272,
+  "sessionId": "f3329b5c-a4f2-4af4-81cf-581b6b540709",
+  "providerState": {
+    "providerSessionId": "f3329b5c-a4f2-4af4-81cf-581b6b540709"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 28,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 26240,
+    "contextWindow": 200000,
+    "contextTokens": 26268,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
 }
