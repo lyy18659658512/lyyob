@@ -6,11 +6,12 @@
 
 ```
 收集（0 - INBOX / 0 - FLEETING）
-  → 处理（1 - LIFE / 2 - WORK / 3 - KNOWLEDGE）
+  → 处理（1 - JOURNAL / 2 - ACTION / 3 - KNOWLEDGE）
     → 归档（5- ARCHIVE）
          ↕
    配置（9 - SYSTEM）
    素材（6 - ATTACHMENTS）
+   资源（7 - RESOURCE）
    等待孵化（4 - CREATION）
 ```
 
@@ -22,15 +23,12 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 |------|---------|---------|
 | `fleeting` | [[9 - SYSTEM/Templates/闪念笔记模板]] | — |
 | `diary` | [[9 - SYSTEM/Templates/日记模板]] | mood, weather |
-| `goal` | [[9 - SYSTEM/Templates/目标模板]] | year, quarter |
-| `project` | [[9 - SYSTEM/Templates/项目笔记模板]] | deadline |
-| `meeting` | [[9 - SYSTEM/Templates/会议记录模板]] | attendees, project |
-| `work-note` | [[9 - SYSTEM/Templates/工作杂记模板]] | — |
+| `project` | [[9 - SYSTEM/Templates/项目笔记模板]] | status, links |
 | `book` | [[9 - SYSTEM/Templates/读书笔记模板]] | author, cover, progress, links, aliases |
-| `course` | [[9 - SYSTEM/Templates/课程笔记模板]] | platform, instructor |
-| `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url |
+| `course` | [[9 - SYSTEM/Templates/课程笔记模板]] | platform, instructor, url, progress, links, aliases |
+| `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url, aliases |
 | `llm` | [[9 - SYSTEM/Templates/对话日志模板]] | source, aliases |
-| `atomic` | [[9 - SYSTEM/Templates/原子笔记模板]] | source |
+| `atomic` | [[9 - SYSTEM/Templates/原子笔记模板]] | source, aliases |
 | `dashboard` | — | — |
 | `system` | — | — |
 

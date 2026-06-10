@@ -25,18 +25,6 @@
     {
       "folder": "3 - KNOWLEDGE/1-Reference/3-Articles",
       "template": "9 - SYSTEM/Templates/文章笔记模板.md"
-    },
-    {
-      "folder": "2 - WORK/2-Meetings",
-      "template": "9 - SYSTEM/Templates/会议记录模板.md"
-    },
-    {
-      "folder": "2 - WORK/1-Projects",
-      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
-    },
-    {
-      "folder": "2 - WORK/3-Notes",
-      "template": "9 - SYSTEM/Templates/工作杂记模板.md"
     }
   ],
   "enable_file_templates": false,
