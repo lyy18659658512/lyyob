@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780981904090-dzjtp6gbi",
+  "providerId": "claude",
+  "title": "同步更新关联知识库文件及模板",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780981904090,
+  "updatedAt": 1780983301672,
+  "lastResponseAt": 1780982593423,
+  "sessionId": "a001e925-15e4-4f31-aabe-b376abf466f0",
+  "providerState": {
+    "providerSessionId": "a001e925-15e4-4f31-aabe-b376abf466f0"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 633,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 74624,
+    "contextWindow": 200000,
+    "contextTokens": 75257,
+    "percentage": 38,
+    "contextWindowIsAuthoritative": true
+  }
+}

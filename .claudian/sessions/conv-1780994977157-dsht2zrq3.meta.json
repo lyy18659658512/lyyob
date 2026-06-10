@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780994977157-dsht2zrq3",
+  "providerId": "claude",
+  "title": "Share internet from PC to phone",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780994977158,
+  "updatedAt": 1780995920316,
+  "lastResponseAt": 1780994991003,
+  "sessionId": "9e78e269-8c8e-4e27-998b-ce64497b353b",
+  "providerState": {
+    "providerSessionId": "9e78e269-8c8e-4e27-998b-ce64497b353b"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 22026,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 22026,
+    "percentage": 11,
+    "contextWindowIsAuthoritative": true
+  }
+}

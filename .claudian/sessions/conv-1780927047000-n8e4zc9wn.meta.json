@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780927047000-n8e4zc9wn",
+  "providerId": "claude",
+  "title": "Design skills for algorithm book notes",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780927047000,
+  "updatedAt": 1780931143137,
+  "lastResponseAt": 1780931131101,
+  "sessionId": "982fb270-aa9f-4f6f-a61d-f3fa41d7fb8e",
+  "providerState": {
+    "providerSessionId": "982fb270-aa9f-4f6f-a61d-f3fa41d7fb8e"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 45,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 249984,
+    "contextWindow": 200000,
+    "contextTokens": 250029,
+    "percentage": 100,
+    "contextWindowIsAuthoritative": true
+  }
+}

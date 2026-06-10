@@ -1,0 +1,23 @@
+{
+  "id": "conv-1781017169340-0g7dwq6f8",
+  "providerId": "claude",
+  "title": "Explain cover field meaning",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781017169341,
+  "updatedAt": 1781055105012,
+  "lastResponseAt": 1781017799472,
+  "sessionId": "03523c4f-1485-4832-9d7e-80aff26a9ea8",
+  "providerState": {
+    "providerSessionId": "03523c4f-1485-4832-9d7e-80aff26a9ea8"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 638,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 69888,
+    "contextWindow": 200000,
+    "contextTokens": 70526,
+    "percentage": 35,
+    "contextWindowIsAuthoritative": true
+  }
+}

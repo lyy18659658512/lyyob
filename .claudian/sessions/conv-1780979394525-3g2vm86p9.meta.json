@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780979394525-3g2vm86p9",
+  "providerId": "claude",
+  "title": "Refactor Obsidian vault architecture",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780979394525,
+  "updatedAt": 1780980992397,
+  "lastResponseAt": 1780980831017,
+  "sessionId": "6e1179b2-48bd-413e-920b-134e9dd4560c",
+  "providerState": {
+    "providerSessionId": "6e1179b2-48bd-413e-920b-134e9dd4560c"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 800,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 93568,
+    "contextWindow": 200000,
+    "contextTokens": 94368,
+    "percentage": 47,
+    "contextWindowIsAuthoritative": true
+  }
+}

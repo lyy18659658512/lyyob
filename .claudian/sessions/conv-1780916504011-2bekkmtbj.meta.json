@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780916504011-2bekkmtbj",
+  "providerId": "claude",
+  "title": "Explain Obsidian image storage",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780916504011,
+  "updatedAt": 1780926805448,
+  "lastResponseAt": 1780916776449,
+  "sessionId": "bed05d05-ab4b-4c05-99a2-1b9f97abf854",
+  "providerState": {
+    "providerSessionId": "bed05d05-ab4b-4c05-99a2-1b9f97abf854"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 612,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 30080,
+    "contextWindow": 200000,
+    "contextTokens": 30692,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}

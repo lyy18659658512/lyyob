@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780931166737-olezode3j",
+  "providerId": "claude",
+  "title": "Create WeRead book note",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780931166737,
+  "updatedAt": 1780960793816,
+  "lastResponseAt": 1780931340939,
+  "sessionId": "f6e8c595-e4fa-4442-b71f-84a050267c36",
+  "providerState": {
+    "providerSessionId": "f6e8c595-e4fa-4442-b71f-84a050267c36"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 79,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 43904,
+    "contextWindow": 200000,
+    "contextTokens": 43983,
+    "percentage": 22,
+    "contextWindowIsAuthoritative": true
+  }
+}

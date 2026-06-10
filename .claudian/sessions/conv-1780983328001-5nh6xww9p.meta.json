@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780983328001-5nh6xww9p",
+  "providerId": "claude",
+  "title": "Recommend Obsidian UI, text, and code fonts",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780983328001,
+  "updatedAt": 1780983634701,
+  "lastResponseAt": 1780983618129,
+  "sessionId": "58365bfa-dade-47ef-93bf-a1ec31f2a30d",
+  "providerState": {
+    "providerSessionId": "58365bfa-dade-47ef-93bf-a1ec31f2a30d"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 301,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 24448,
+    "contextWindow": 200000,
+    "contextTokens": 24749,
+    "percentage": 12,
+    "contextWindowIsAuthoritative": true
+  }
+}

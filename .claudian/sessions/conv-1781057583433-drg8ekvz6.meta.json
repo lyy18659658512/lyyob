@@ -1,0 +1,23 @@
+{
+  "id": "conv-1781057583433-drg8ekvz6",
+  "providerId": "claude",
+  "title": "Design Obsidian project workflow",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781057583434,
+  "updatedAt": 1781060893966,
+  "lastResponseAt": 1781058598157,
+  "sessionId": "d4c822ad-d72a-4c98-9277-dcf8b5b7b257",
+  "providerState": {
+    "providerSessionId": "d4c822ad-d72a-4c98-9277-dcf8b5b7b257"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 538,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 39936,
+    "contextWindow": 200000,
+    "contextTokens": 40474,
+    "percentage": 20,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780971993908-ivmnvzjzl",
+  "providerId": "claude",
+  "title": "评估知识库笔记添加别名字段",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780971993908,
+  "updatedAt": 1780978202905,
+  "lastResponseAt": 1780973465240,
+  "sessionId": "845cbb2c-8ea0-4893-b841-a649aa4d09ec",
+  "providerState": {
+    "providerSessionId": "845cbb2c-8ea0-4893-b841-a649aa4d09ec"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 441,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 90240,
+    "contextWindow": 200000,
+    "contextTokens": 90681,
+    "percentage": 45,
+    "contextWindowIsAuthoritative": true
+  }
+}

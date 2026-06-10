@@ -1,0 +1,17 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/graph.json
+.trash/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Remotely Save 同步缓存
+.remotely-save/
+
+# Git 插件日志
+obsidian-git-data.json

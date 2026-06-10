@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780984149437-td8t5a7k9",
+  "providerId": "claude",
+  "title": "改造INBOX模板为闪念笔记",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780984149437,
+  "updatedAt": 1780989939044,
+  "lastResponseAt": 1780989819336,
+  "sessionId": "3eb1896a-56d1-428b-bade-cfc106dba8ae",
+  "providerState": {
+    "providerSessionId": "3eb1896a-56d1-428b-bade-cfc106dba8ae"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 931,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 155904,
+    "contextWindow": 200000,
+    "contextTokens": 156835,
+    "percentage": 78,
+    "contextWindowIsAuthoritative": true
+  }
+}

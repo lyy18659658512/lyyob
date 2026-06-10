@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780906150256-v6yoi5w6i",
+  "providerId": "claude",
+  "title": "Debug / key not loading skill",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780906150256,
+  "updatedAt": 1780916490678,
+  "lastResponseAt": 1780907600858,
+  "sessionId": "8e764b48-f8ee-4a01-adf9-d45b4b0ac1d2",
+  "providerState": {
+    "providerSessionId": "8e764b48-f8ee-4a01-adf9-d45b4b0ac1d2"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 16,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 77056,
+    "contextWindow": 200000,
+    "contextTokens": 77072,
+    "percentage": 39,
+    "contextWindowIsAuthoritative": true
+  }
+}

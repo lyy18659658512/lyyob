@@ -1,0 +1,23 @@
+{
+  "id": "conv-1781016427126-4q34etyka",
+  "providerId": "claude",
+  "title": "Delete hobby template and folder",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781016427126,
+  "updatedAt": 1781016637515,
+  "lastResponseAt": 1781016567688,
+  "sessionId": "bc37f017-58ff-45eb-81f5-60d26a79727f",
+  "providerState": {
+    "providerSessionId": "bc37f017-58ff-45eb-81f5-60d26a79727f"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 53,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 30720,
+    "contextWindow": 200000,
+    "contextTokens": 30773,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}
