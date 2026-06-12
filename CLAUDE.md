@@ -5,8 +5,12 @@
 ## 📁 知识库速览
 
 ```
-收集（0 - INBOX / 0 - FLEETING）
+收集（0 - INBOX）
   → 处理（1 - JOURNAL / 2 - ACTION / 3 - KNOWLEDGE）
+       ├── 2 - ACTION/1-Career/  ← 事业、副业、教学
+       ├── 2 - ACTION/2-Learning/ ← 课程、读书、技能学习
+       ├── 2 - ACTION/3-Life/    ← 财务、健康、日常
+       └── 2 - ACTION/9-someday/ ← 孵化池
     → 归档（5- ARCHIVE）
          ↕
    配置（9 - SYSTEM）
@@ -21,9 +25,8 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 
 | type | 模板文件 | 专属字段 |
 |------|---------|---------|
-| `fleeting` | [[9 - SYSTEM/Templates/闪念笔记模板]] | — |
 | `diary` | [[9 - SYSTEM/Templates/日记模板]] | mood, weather |
-| `project` | [[9 - SYSTEM/Templates/项目笔记模板]] | status, links |
+| `project` | [[9 - SYSTEM/Templates/项目笔记模板]] | status, progress, startDate, deadline, links |
 | `book` | [[9 - SYSTEM/Templates/读书笔记模板]] | author, cover, progress, links, aliases |
 | `course` | [[9 - SYSTEM/Templates/课程笔记模板]] | platform, instructor, url, progress, links, aliases |
 | `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url, aliases |
@@ -39,7 +42,6 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 - **Calendar** ✅ — 日历导航
 - **Remotely Save** ✅ — 多端同步
 - **Weread** ✅ — 微信读书笔记自动导入
-- _待安装：Quick Add、Omnisearch、Periodic Notes_
 
 ## 🛠 AI 操作规则
 

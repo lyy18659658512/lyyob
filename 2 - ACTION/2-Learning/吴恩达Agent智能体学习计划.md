@@ -3,8 +3,14 @@ title: 吴恩达Agent智能体学习计划
 type: project
 created: 2026-06-10
 updated: 2026-06-10
-tags: [AI, agent, 课程学习]
+tags:
+  - AI
+  - agent
+  - 课程学习
 status: active
+progress: 20%
+startDate: 2026-06-10
+deadline:
 links:
   - "[[3 - KNOWLEDGE/1-Literature/2-Courses/吴恩达-Agent智能体课程]]"
 ---
@@ -23,10 +29,10 @@ links:
 
 ### 筹备
 - [x] 创建课程笔记
-- [ ] 了解课程大纲，预估学习时间
+
 
 ### 学习
-- [ ] **第 1 课**：课程介绍 + Agent 概述
+- [x] **第 1 课**：课程介绍 + Agent 概述
 - [ ] **第 2 课**：Reflection（反思）模式
 - [ ] **第 3 课**：Tool Use（工具使用）模式
 - [ ] **第 4 课**：Planning（规划）模式
@@ -37,10 +43,6 @@ links:
 ### 产出
 - [ ] 完成所有课程笔记
 - [ ] 汇总关键收获到课程笔记
-
-## 📝 开发/进展记录
-
-- **2026-06-10**：创建学习计划，建立课程笔记
 
 ## ⚠️ 问题与阻塞
 

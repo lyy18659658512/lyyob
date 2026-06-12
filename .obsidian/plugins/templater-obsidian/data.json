@@ -25,6 +25,22 @@
     {
       "folder": "3 - KNOWLEDGE/1-Reference/3-Articles",
       "template": "9 - SYSTEM/Templates/文章笔记模板.md"
+    },
+    {
+      "folder": "2 - ACTION/2-Learning",
+      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
+    },
+    {
+      "folder": "2 - ACTION/3-Life",
+      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
+    },
+    {
+      "folder": "2 - ACTION/1-Career",
+      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
+    },
+    {
+      "folder": "2 - ACTION/9-someday",
+      "template": "9 - SYSTEM/Templates/项目笔记模板.md"
     }
   ],
   "enable_file_templates": false,
