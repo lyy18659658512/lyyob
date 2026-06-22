@@ -1,7 +1,7 @@
 ---
 title: Skill对话日志改造
 type: llm
-source: Claude对话
+model: Claude对话
 created: 2026-06-09
 updated: 2026-06-09
 tags: []

@@ -1,10 +1,10 @@
 ---
-title: "Obsidian多端同步方案"
+title: Obsidian多端同步方案
 type: atomic
 created: 2025-11-15
 updated: 2025-11-18
 tags: []
-source: "个人实践"
+source:
 links: []
 aliases: []
 ---

@@ -1,7 +1,7 @@
 ---
 title: DeepSeek API 模型名称配置
 type: llm
-source: 元宝（腾讯混元/DeepSeek）
+model: 元宝（腾讯混元/DeepSeek）
 created: 2026-06-09
 updated: 2026-06-09
 tags: []

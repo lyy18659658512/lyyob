@@ -6,14 +6,15 @@
         "conversationId": "conv-1781061915132-d8xdoc0de"
       },
       {
-        "tabId": "tab-1781251966995-uj7lmka",
-        "conversationId": "conv-1781181935346-mg31rmuun"
+        "draftModel": "sonnet",
+        "tabId": "tab-1781594792976-j8781tg",
+        "conversationId": null
       },
       {
-        "tabId": "tab-1781253781018-m3dgwmx",
-        "conversationId": "conv-1781262581111-t4jo6ifo5"
+        "tabId": "tab-1781596062832-yhsqj91",
+        "conversationId": "conv-1781706911556-jbmcvw0l8"
       }
     ],
-    "activeTabId": "tab-1781253781018-m3dgwmx"
+    "activeTabId": "tab-1781596062832-yhsqj91"
   }
 }

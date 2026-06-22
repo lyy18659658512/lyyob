@@ -29,9 +29,9 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 | `project` | [[9 - SYSTEM/Templates/项目笔记模板]] | status, progress, startDate, deadline, links |
 | `book` | [[9 - SYSTEM/Templates/读书笔记模板]] | author, cover, progress, links, aliases |
 | `course` | [[9 - SYSTEM/Templates/课程笔记模板]] | platform, instructor, url, progress, links, aliases |
-| `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url, aliases |
-| `llm` | [[9 - SYSTEM/Templates/对话日志模板]] | source, aliases |
-| `atomic` | [[9 - SYSTEM/Templates/原子笔记模板]] | source, aliases |
+| `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url, links, aliases |
+| `llm` | [[9 - SYSTEM/Templates/对话日志模板]] | model, links, aliases |
+| `atomic` | [[9 - SYSTEM/Templates/原子笔记模板]] | source, links, aliases |
 | `dashboard` | — | — |
 | `system` | — | — |
 

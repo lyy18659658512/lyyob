@@ -1,7 +1,7 @@
 ---
 title: Obsidian 同步与版本控制方案
 type: llm
-source: ""
+model: ""
 created: 2026-06-10
 updated: 2026-06-10
 tags: []
