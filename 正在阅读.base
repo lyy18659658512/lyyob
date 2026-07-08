@@ -1,0 +1,23 @@
+views:
+  - type: cards
+    name: 视图
+    filters:
+      and:
+        - file.folder == "3 - KNOWLEDGE/1-Literature/1-Books"
+        - progress != "100%"
+    order:
+      - file.name
+      - progress
+    image: note.cover
+    imageAspectRatio: 1.05
+    imageFit: contain
+    cardSize: 270
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "3 - KNOWLEDGE/1-Literature/1-Books"
+    order:
+      - file.name
+      - progress
+      - author

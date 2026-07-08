@@ -17,7 +17,6 @@ desktop.ini
 obsidian-git-data.json
 
 # AI 辅助工具本地缓存（设备特有，无需同步）
-.claude/
 .claudian/
 
 
