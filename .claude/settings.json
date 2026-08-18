@@ -1,13 +1,43 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(mkdir -p \".claude/skills/bilibili-course\")",
-      "Edit(/.claude/skills/bilibili-course/**)",
-      "WebFetch(domain:www.bilibili.com)",
-      "WebSearch",
-      "WebFetch(domain:api.bilibili.com)",
-      "Bash(curl -s 'https://api.bilibili.com/x/player/pagelist?bvid=BV1qE411H7Uv' -H 'User-Agent: Mozilla/5.0' --connect-timeout 10)",
-      "Bash(python3 -c ' *)"
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/check-consistency-need.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": ".claude/hooks/check-inbox.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/block-dangerous.sh",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/validate-frontmatter.sh",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }

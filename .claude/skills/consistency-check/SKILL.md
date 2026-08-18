@@ -71,6 +71,15 @@ description: >
 - 读取最近 10 条变更记录
 - 检查是否有标记为 `🔄 待同步` 的条目
 
+#### 1f. Hook 脚本与配置
+
+读取 `.claude/settings.json` 和 `.claude/hooks/` 下的所有 `.sh` 文件，以及 CLAUDE.md 的 Hook 全景表，提取：
+
+- `settings.json` 中注册的所有 hook（时机、匹配器、脚本路径）
+- CLAUDE.md「了解 Hook 系统」表中所有行
+- `.claude/hooks/` 下实际存在的脚本文件列表
+- `validate-frontmatter.sh` 中的 type→模板映射表（`case` 分支）
+
 ---
 
 ### Step 2：逐项比对
@@ -114,6 +123,15 @@ description: >
 | 2d.1 | 待同步条目 | 变更记录中是否有 `🔄 待同步` 的条目，如果有，列出这些条目 |
 | 2d.2 | 变更记录完整性 | 对比模板文件的修改时间与变更记录，如果模板最近被修改但变更记录无对应条目，提示用户 |
 
+#### 2e. Hook 系统检测
+
+| # | 检测项 | 规则 |
+|---|--------|------|
+| 2e.1 | 注册一致性 | settings.json 中注册的每个 hook（时机+匹配器+脚本）是否与 CLAUDE.md Hook 表一致——两边条目数和脚本名完全相同 |
+| 2e.2 | 脚本存在性 | settings.json 中引用的每个脚本是否在 `.claude/hooks/` 下实际存在 |
+| 2e.3 | 孤儿脚本 | `.claude/hooks/` 下是否存在未被 settings.json 注册的 `.sh` 文件 |
+| 2e.4 | validate-frontmatter 映射 | 脚本中 `case` 分支的 type→模板文件名映射是否与 `9 - SYSTEM/Templates/` 下的实际模板一致 |
+
 ---
 
 ### Step 3：生成检测报告
@@ -134,6 +152,7 @@ description: >
 | 📄 模板 vs 操作规范 | ✅/⚠️/❌ | N 项 |
 | 📖 操作规范 vs CLAUDE.md | ✅/⚠️/❌ | N 项 |
 | 🤖 Skill 硬编码 | ✅/⚠️/❌ | N 项 |
+| 🪝 Hook 系统 | ✅/⚠️/❌ | N 项 |
 | 📝 变更记录 | ✅/⚠️/❌ | N 项 |
 
 ## 📄 模板 vs 操作规范
@@ -170,6 +189,23 @@ description: >
 | weread-book-note | `type: book`（符合模板） | ✅ |
 | weread-book-note | `3 - KNOWLEDGE/1-文献笔记/1-读书笔记/` | ✅ 路径有效 |
 | conversation-log | `3 - KNOWLEDGE/1-文献笔记/LLM问答/` | ✅ 路径有效 |
+
+## 🪝 Hook 系统检查
+
+### Hook 注册一致性
+
+| settings.json 注册 | 实际脚本文件 | CLAUDE.md 表 | 状态 |
+|-------------------|------------|:---:|:----:|
+| `SessionStart` → `check-inbox.sh` | `.claude/hooks/check-inbox.sh` | ✅ | ✅ |
+| ... | ... | ... | ... |
+
+### validate-frontmatter.sh 硬编码映射
+
+| type | 映射模板 | 模板存在 | 状态 |
+|------|---------|:---:|:----:|
+| diary | 日记模板 | ✅ | ✅ |
+| project | 项目笔记模板 | ✅ | ✅ |
+| ... | ... | ... | ... |
 
 ## 📝 变更记录
 

@@ -17,7 +17,6 @@
    配置（9 - SYSTEM）
    素材（6 - ATTACHMENTS）
    资源（7 - RESOURCE）
-   等待孵化（4 - CREATION）
 ```
 
 ## 🏷 type 与模板速查
@@ -31,8 +30,8 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 | `book` | [[9 - SYSTEM/Templates/读书笔记模板]] | author, cover, progress, links, aliases |
 | `course` | [[9 - SYSTEM/Templates/课程笔记模板]] | platform, instructor, url, progress, links, aliases |
 | `article` | [[9 - SYSTEM/Templates/文章笔记模板]] | author, url, links, aliases |
-| `llm` | [[9 - SYSTEM/Templates/对话日志模板]] | model, links, aliases |
-| `atomic` | [[9 - SYSTEM/Templates/原子笔记模板]] | source, links, aliases |
+| `llm` | [[对话日志模板]] | model, links, aliases |
+| `atomic` | [[原子笔记模板]] | source, links, aliases |
 | `dashboard` | — | — |
 | `system` | — | — |
 
@@ -62,6 +61,7 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 | `weread-book-note` | "整理读书笔记"、"处理微信读书笔记" |
 | `consistency-check` | "知识库一致性检测"、"知识库体检" |
 | `english-pdf-vocab` | "翻译关键词"、"中英对照"、"帮我读这个PDF"、"提取术语" |
+| `bilibili-course` | "B站课程创建学习计划"、"拆解课程任务"、"把这个视频做成学习项目" |
 
 ## 🛠 AI 操作规则
 
@@ -72,3 +72,11 @@ AI 创建笔记时必须设置正确的 `type`。使用 Templater 插入模板�
 4. **正文 wikilink**：inline 优先，栏目只做补充
 5. **系统变更后**：提醒用户可运行一致性检测（`consistency-check`）
 6. **有疑问先查** [[9 - SYSTEM/知识库操作规范]]
+7. **了解 Hook 系统**：以下 hooks 在对应时机自动运行，AI 应在首轮回复时报告 SessionStart 的输出：
+
+| 时机                   | Hook 脚本                     | 功能                            |
+| -------------------- | --------------------------- | ----------------------------- |
+| `SessionStart`       | `check-inbox.sh`            | 统计 INBOX 待处理文件                |
+| `SessionStart`       | `check-consistency-need.sh` | 检测系统文件自上次一致性检测以来是否有变更         |
+| `PreToolUse → Bash`  | `block-dangerous.sh`        | 拦截危险命令（`rm -rf /` 等），输出警告或阻断  |
+| `PreToolUse → Write` | `validate-frontmatter.sh`   | 对照模板校验新建笔记的 frontmatter 字段一致性 |

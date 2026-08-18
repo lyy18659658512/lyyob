@@ -237,14 +237,17 @@ def parse_weread_note(filepath: str) -> dict:
     if notes_section.strip():
         highlights = parse_notes_section(notes_section)
 
-    # 5. 回退：如果 # 读书笔记 为空，尝试从 # 高亮划线 解析纯划线
-    if not highlights and has_highlights:
+    # 5. 同时从 # 高亮划线 中提取纯划线（与 # 读书笔记 合并，不互相排斥）
+    if has_highlights:
         hl_start = body.index('# 高亮划线')
         hl_end = body.index('# 读书笔记') if has_reading_notes else len(body)
         hl_section = body[hl_start:hl_end]
         pure_highlights = parse_pure_highlights(hl_section)
-        if pure_highlights:
-            highlights = [{'chapter': '📖 全书摘录', **h} for h in pure_highlights]
+        # 用 refID 去重（读书笔记区已收录的跳过）
+        seen_refs = {h['refID'] for h in highlights if h.get('refID')}
+        for h in pure_highlights:
+            if h.get('refID') and h['refID'] not in seen_refs:
+                highlights.append(h)
 
     return {'book': book, 'highlights': highlights}
 
@@ -272,7 +275,10 @@ def parse_notes_section(section: str) -> list:
         # 检测划线 + refID
         hl_match = HIGHLIGHT_PAT.match(line)
         if hl_match and current_chapter:
-            text = hl_match.group(1).strip()
+            raw_text = hl_match.group(1).strip()
+            # 如果内容在 markdown 链接中，提取显示文本
+            md_match = MD_LINK_TEXT_PAT.match(raw_text)
+            text = md_match.group(1).strip() if md_match else raw_text
             ref_id = hl_match.group(2).strip()
             comment = None
             timestamp = None
@@ -337,13 +343,26 @@ def parse_pure_highlights(section: str) -> list:
         # 尝试格式 A：> 📌 text ^refID
         hl_a = HIGHLIGHT_PAT.match(stripped)
         if hl_a:
+            raw_text = hl_a.group(1).strip()
+            # 如果内容在 markdown 链接中，提取显示文本
+            md_match = MD_LINK_TEXT_PAT.match(raw_text)
+            text = md_match.group(1).strip() if md_match else raw_text
             highlights.append({
                 'chapter': current_chapter or '📖 全书摘录',
-                'text': hl_a.group(1).strip(),
+                'text': text,
                 'refID': hl_a.group(2).strip(),
                 'comment': None,
                 'timestamp': None,
             })
+            continue
+
+        # 检测 - 💭 评论（可能跟在格式 A 划线之后，补充到上一条）
+        cm_match = COMMENT_PAT.match(stripped)
+        if cm_match and highlights:
+            raw_comment = cm_match.group(1).strip()
+            # 去掉末尾的时间戳（- ⏱ YYYY-MM-DD HH:MM:SS）
+            raw_comment = re.sub(r'\s*-\s*⏱\s*.*$', '', raw_comment).strip()
+            highlights[-1]['comment'] = raw_comment
             continue
 
         # 尝试格式 B：> 📌 [text](url) 或 > 📌 text（无 refID 同行）
@@ -471,6 +490,7 @@ def generate_book_note(parsed: dict, existing_refs: set = None) -> tuple:
     lines.append(f'updated: {today_str()}')
     lines.append('tags: []')
     lines.append('links: []')
+    lines.append('aliases: []')
     lines.append('---')
     lines.append('')
 

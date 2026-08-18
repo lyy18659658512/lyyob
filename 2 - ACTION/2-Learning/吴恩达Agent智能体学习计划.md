@@ -12,7 +12,7 @@ progress: 20%
 startDate: 2026-06-10
 deadline:
 links:
-  - "[[3 - KNOWLEDGE/1-Literature/2-Courses/吴恩达-Agent智能体课程]]"
+  - "[[吴恩达-Agent智能体课程]]"
 ---
 
 # 吴恩达Agent智能体学习计划

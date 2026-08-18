@@ -2,11 +2,12 @@
 title: Claude Code实战：Harness工程之道
 type: book
 author: 黄佳
-cover: 6 - ATTACHMENTS/cover_Claude_Code实战：Harness工程之道.jpg
+cover: 6 - ATTACHMENTS/cover_Claude Code实战.jpg
 progress: 100%
 created: 2026-07-07
-updated: 2026-07-07
+updated: 2026-07-16
 tags: []
+aliases: ["Claude Code实战"]
 links: []
 ---
 
@@ -85,5 +86,3 @@ links: []
 	- 2 示例驱动
 	- 3 明确边界 <!-- ^3300212700-45-24617-24623 -->
   **个人思考**：—
-
----
