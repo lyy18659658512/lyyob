@@ -64,7 +64,7 @@ description: >
 
 - 是否硬编码了模板路径（如 `9 - SYSTEM/Templates/xxx.md`）
 - 是否硬编码了 YAML 字段名
-- 是否硬编码了知识库文件夹路径（如 `3 - KNOWLEDGE/1-Reference/1-Books/`）
+- 是否硬编码了知识库文件夹路径（如 `3 - KNOWLEDGE/1-Literature/1-Books/`）
 
 #### 1e. 变更记录 `9 - SYSTEM/变更记录.md`
 
@@ -111,7 +111,7 @@ description: >
 | # | 检测项 | 规则 |
 |---|--------|------|
 | 2c.1 | 模板路径 | Skill 是否引用了 `9 - SYSTEM/Templates/` 下的具体文件，该文件是否存在 |
-| 2c.2 | 文件夹路径 | Skill 是否硬编码了输出路径（如 `3 - KNOWLEDGE/1-文献笔记/*`），该路径在当前结构中是否有效 |
+| 2c.2 | 文件夹路径 | Skill 是否硬编码了输出路径（如 `3 - KNOWLEDGE/1-Literature/*`），该路径在当前结构中是否有效 |
 | 2c.3 | YAML 字段 | Skill 是否直接操作特定 YAML 字段名，这些字段在当前模板中是否存在 |
 
 **注意**: Skill 硬编码本身并不一定是问题，但需要标记让用户知晓。如果模板变更而 Skill 仍引用旧字段/路径，则标记为 ⚠️。
@@ -187,8 +187,8 @@ description: >
 | Skill | 硬编码项 | 状态 |
 |-------|---------|:----:|
 | weread-book-note | `type: book`（符合模板） | ✅ |
-| weread-book-note | `3 - KNOWLEDGE/1-文献笔记/1-读书笔记/` | ✅ 路径有效 |
-| conversation-log | `3 - KNOWLEDGE/1-文献笔记/LLM问答/` | ✅ 路径有效 |
+| weread-book-note | `3 - KNOWLEDGE/1-Literature/1-Books/` | ✅ 路径有效 |
+| conversation-log | `3 - KNOWLEDGE/1-Literature/4-LLM/` | ✅ 路径有效 |
 
 ## 🪝 Hook 系统检查
 

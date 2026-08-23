@@ -8,6 +8,7 @@
 ```
 收集（0 - INBOX）
   → 处理（1 - JOURNAL / 2 - ACTION / 3 - KNOWLEDGE）
+       ├── 1 - JOURNAL/YYYY-MM/ ← 日记按月份归档
        ├── 2 - ACTION/1-Career/  ← 事业、副业、教学
        ├── 2 - ACTION/2-Learning/ ← 课程、读书、技能学习
        ├── 2 - ACTION/3-Life/    ← 财务、健康、日常
