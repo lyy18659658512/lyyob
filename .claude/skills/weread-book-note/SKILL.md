@@ -303,13 +303,13 @@ IF highlights is empty:
 
 #### 4b.1 提取已有 refID
 
-读取已有读书笔记全文，用正则提取所有 `<!-- ^refID -->`：
+读取已有读书笔记全文，用正则提取所有 refID（兼容 `<!-- ^refID -->` 注释与内联 `^refID` 两种格式）：
 
 ```python
 existing_refs = set()
-existing_pat = re.compile(r'<!--\s*\^([\w-]+)\s*-->')
+existing_pat = re.compile(r'<!--\s*\^([\w-]+)\s*-->|\^([\w-]+)')
 for match in existing_pat.finditer(existing_content):
-    existing_refs.add(match.group(1))
+    existing_refs.add(match.group(1) or match.group(2))
 ```
 
 #### 4b.2 过滤出新条目

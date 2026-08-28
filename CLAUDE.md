@@ -13,7 +13,7 @@
        ├── 2 - ACTION/2-Learning/ ← 课程、读书、技能学习
        ├── 2 - ACTION/3-Life/    ← 财务、健康、日常
        └── 2 - ACTION/9-someday/ ← 孵化池
-    → 归档（5- ARCHIVE）
+    → 归档（5 - ARCHIVE）
          ↕
    配置（9 - SYSTEM）
    素材（6 - ATTACHMENTS）

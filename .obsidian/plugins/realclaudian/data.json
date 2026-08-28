@@ -3,17 +3,18 @@
     "openTabs": [
       {
         "tabId": "tab-1782657515470-fv3j08p",
-        "conversationId": "conv-1784212830904-em7yz5ift"
+        "conversationId": "conv-1787760858250-x6qstznq5"
       },
       {
         "tabId": "tab-1786329796211-68fb6nq",
-        "conversationId": "conv-1786329820987-5h5hkifb2"
+        "conversationId": "conv-1787900851872-0dhgw36hf"
       },
       {
+        "draftModel": "sonnet",
         "tabId": "tab-1786330441988-bnquequ",
-        "conversationId": "conv-1787062945788-0aq3rub7v"
+        "conversationId": null
       }
     ],
-    "activeTabId": "tab-1786330441988-bnquequ"
+    "activeTabId": "tab-1786329796211-68fb6nq"
   }
 }

@@ -62,8 +62,8 @@ COMMENT_PAT = re.compile(r'^\s*-\s*💭\s*(.*)')
 # 时间戳：- ⏱ ...
 TIMESTAMP_PAT = re.compile(r'^\s*-\s*⏱\s*(.*)')
 
-# 已存在的 refID（从读书笔记的 HTML 注释中提取）
-EXISTING_REF_PAT = re.compile(r'<!--\s*\^([\w-]+)\s*-->')
+# 已存在的 refID（兼容两种格式：HTML 注释 <!-- ^refID --> 与内联 ^refID）
+EXISTING_REF_PAT = re.compile(r'<!--\s*\^([\w-]+)\s*-->|\^([\w-]+)')
 
 # 非法文件名字符（Windows）
 INVALID_FILENAME_CHARS = r'[:*?"<>|/\\]'
@@ -100,7 +100,10 @@ def safe_filename(name: str) -> str:
 
 def extract_refs_from_note(content: str) -> set:
     """从已有的读书笔记中提取所有 refID。"""
-    return set(EXISTING_REF_PAT.findall(content))
+    refs = set()
+    for match in EXISTING_REF_PAT.finditer(content):
+        refs.add(match.group(1) or match.group(2))
+    return refs
 
 
 def today_str() -> str:
@@ -400,13 +403,8 @@ def parse_pure_highlights(section: str) -> list:
 TEMPLATE_PATH = '9 - SYSTEM/Templates/读书笔记模板.md'
 
 
-def load_template_prefix(book: dict) -> str:
-    """
-    读取模板文件，提取 `` ## 📝 摘录与思考 `` 之前的所有内容（前缀），
-    处理 Templater 标签后返回。
-
-    返回处理后的 Markdown 字符串。读取失败或找不到目标区域时返回空字符串。
-    """
+def _read_template_body() -> str:
+    """读取模板文件正文（去除 frontmatter）。读取失败时返回空字符串。"""
     try:
         with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -416,7 +414,17 @@ def load_template_prefix(book: dict) -> str:
     fm_match = FM_PATTERN.match(content)
     if not fm_match:
         return ''
-    body = content[fm_match.end():]
+    return content[fm_match.end():]
+
+
+def load_template_prefix(book: dict) -> str:
+    """
+    读取模板文件，提取 `` ## 📝 摘录与思考 `` 之前的所有内容（前缀），
+    处理 Templater 标签后返回。
+
+    返回处理后的 Markdown 字符串。读取失败或找不到目标区域时返回空字符串。
+    """
+    body = _read_template_body()
 
     notes_idx = body.find('## 📝 摘录与思考')
     if notes_idx < 0:
@@ -431,6 +439,35 @@ def load_template_prefix(book: dict) -> str:
     prefix = re.sub(r'<%.*?%>', '', prefix)
 
     return prefix.strip()
+
+
+def load_template_suffix() -> str:
+    """
+    读取模板文件，提取「## 📝 摘录与思考」之后的后续章节
+    （从第一个后续 ## 标题起至文件末尾，如 ## 📌 行动指南），
+    处理 Templater 标签后返回。
+
+    返回处理后的 Markdown 字符串。读取失败或没有后续章节时返回空字符串。
+    """
+    body = _read_template_body()
+
+    notes_idx = body.find('## 📝 摘录与思考')
+    if notes_idx < 0:
+        return ''
+
+    # 在「摘录与思考」之后找第一个 ## 标题（即模板的后续章节）
+    after_notes = body[notes_idx + len('## 📝 摘录与思考'):]
+    heading = re.search(r'^##\s+.*$', after_notes, re.MULTILINE)
+    if not heading:
+        return ''
+    suffix = after_notes[heading.start():]
+
+    # 处理 Templater 标签
+    suffix = re.sub(r"<%\s*tp\.date\.now\(.*?\)\s*%>", today_str(), suffix)
+    # 清理其他未处理的 Templater 标签（保留可见文本）
+    suffix = re.sub(r'<%.*?%>', '', suffix)
+
+    return suffix.strip()
 
 def generate_book_note(parsed: dict, existing_refs: set = None) -> tuple:
     """
@@ -528,6 +565,12 @@ def generate_book_note(parsed: dict, existing_refs: set = None) -> tuple:
             lines.append('')
             lines.append('---')
             lines.append('')
+
+    # 创建场景：追加模板中「摘录与思考」之后的后续章节（如 ## 📌 行动指南）
+    if not is_update:
+        template_suffix = load_template_suffix()
+        if template_suffix:
+            lines.append(template_suffix)
 
     content = '\n'.join(lines)
     stats['chapters_new'] = len(new_highlights)

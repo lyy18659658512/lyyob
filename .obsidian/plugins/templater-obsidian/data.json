@@ -19,12 +19,12 @@
       "template": "9 - SYSTEM/Templates/原子笔记模板.md"
     },
     {
-      "folder": "3 - KNOWLEDGE/1-Reference/2-Courses",
-      "template": "9 - SYSTEM/Templates/课程笔记模板.md"
+      "folder": "3 - KNOWLEDGE/1-Literature/3-Articles",
+      "template": "9 - SYSTEM/Templates/文章笔记模板.md"
     },
     {
-      "folder": "3 - KNOWLEDGE/1-Reference/3-Articles",
-      "template": "9 - SYSTEM/Templates/文章笔记模板.md"
+      "folder": "3 - KNOWLEDGE/1-Literature/2-Courses",
+      "template": "9 - SYSTEM/Templates/课程笔记模板.md"
     },
     {
       "folder": "2 - ACTION/2-Learning",
